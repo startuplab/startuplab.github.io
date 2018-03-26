@@ -1,0 +1,33 @@
+<body>
+  <div class="videos">
+    <iframe width="1024" height="768" src="http://www.youtube.com/embed/videoseries?list=PLTT-Xb7kSZWVpo9u7iHcF7z2xLx4s0f7R&index=41" frameborder="0" allowfullscreen id="playlist"></iframe>
+  </div>
+</body>
+
+<script>
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+document.getElementById('playlist').src = "http://www.youtube.com/embed/videoseries?list=PLTT-Xb7kSZWVpo9u7iHcF7z2xLx4s0f7R&index=" + getRandomInt(0,1800);  
+</script>
+
+<style>
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+}
+
+  body {
+  background: black;
+  }
+  .videos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+#playlist{width:100%!important;height:100vh;marign:0 ;padding:0}
+</style>
